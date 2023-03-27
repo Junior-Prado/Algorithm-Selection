@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling","numpy","pandas","sklearn","scipy"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ASP"
+version = "0.0.1"
+authors = [
+  { name="Valfrido da Ponte Prado Junior", email="juniorprado@alu.ufc.br" },
+]
+description = "Functions dedicated to The Algoritm Selection problem with a focus on a metalearning approach"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Junior-Prado/ASP_main"
