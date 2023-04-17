@@ -1,20 +1,3 @@
-def split_train_test(data, k = 2, index = 0):
-
-    # isolando dataset para dado valor de k
-    data = data[data['n_clusters'] == k]
-    data = data.reset_index()
-    data = data.iloc[:,2:]
-    
-    # isolando dados de teste
-    X = data.drop(index, axis = 0)
-    X_MF = X.iloc[:,0:19]
-    X_RK = X.iloc[:,19:26]
-    
-    y = data.iloc[index]
-    y_MF = y.iloc[0:19]
-    y_RK = y.iloc[19:26]
-    
-    return X_MF, X_RK, y_MF, y_RK
 
 def NN_weights(X,y,n_neighbors = 6):
     from sklearn.neighbors import KDTree
@@ -33,6 +16,8 @@ def NN_weights(X,y,n_neighbors = 6):
         weights[i] = distance[j]
         j+=1
     return weights/weights.sum()
+
+
 
 def get_ranking(X,y_MF,n_neighbors = 6):
     from scipy.stats import rankdata
@@ -53,10 +38,11 @@ def get_ranking(X,y_MF,n_neighbors = 6):
     
     return df
 
+
+
 def get_all_scores(data):
     from scipy.stats import spearmanr, rankdata
     import pandas as pd
-    
     
     # geting the min and max values of k and the number of datasets
     min_k = int(data['n_clusters'].min())
