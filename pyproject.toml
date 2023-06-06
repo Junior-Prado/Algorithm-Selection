@@ -1,10 +1,10 @@
 [build-system]
-requires = ["hatchling","numpy","pandas","sklearn","scipy"]
+requires = ["hatchling","numpy","pandas","sklearn","scipy", "io"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ASP"
-version = "0.0.1"
+name = "Algorithm-Selection"
+version = "0.0.5"
 authors = [
   { name="Valfrido da Ponte Prado Junior", email="juniorprado@alu.ufc.br" },
 ]
@@ -13,9 +13,9 @@ readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "License :: MIT License",
     "Operating System :: OS Independent",
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/Junior-Prado/ASP_main"
+"Homepage" = "https://github.com/Junior-Prado/Algorithm-Selection"
